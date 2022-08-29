@@ -1,7 +1,7 @@
 <section class="bg-base-300">
-	<div class="container px-5 py-24 mx-auto">
+	<div class="container px-5 py-12 mx-auto">
 		<div class="text-center">
-			<h1 class="mb-5 text-5xl font-bold">사진첩</h1>
+			<h1 class="mb-10 text-5xl font-bold">사진첩</h1>
 			<div
 				class="flex w-full grid-flow-row grid-cols-12 items-center gap-5 overflow-y-hidden overflow-x-scroll pt-1 pb-10 xl:overflow-x-auto xl:px-4"
 			>

@@ -53,9 +53,7 @@
 		<div class="mb-10">
 			{#each data.guestbooks as guestbook}
 				<div class="container px-5 py-2 mx-auto">
-					<div
-						class="flex flex-col w-full p-8 mx-auto bg-white rounded-lg shadow-md"
-					>
+					<div class="flex flex-col w-full p-8 mx-auto bg-white rounded-lg shadow-md">
 						<div class="mt-2">
 							<p class="text-2xl font-bold text-gray-700">{guestbook.name}</p>
 							<p class="mt-2 text-gray-600">{guestbook.content}</p>

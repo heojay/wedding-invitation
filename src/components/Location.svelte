@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
+		// eslint-disable-next-line no-undef
 		new daum.roughmap.Lander({
 			timestamp: '1661051801591',
 			key: '2bfnx',

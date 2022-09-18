@@ -16,7 +16,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.36.0",
 		"@typescript-eslint/parser": "^5.36.0",
 		"autoprefixer": "^10.4.8",
-		"eslint": "8.22.0",
+		"eslint": "^8.23.1",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"postcss": "^8.4.16",
@@ -32,6 +32,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@splidejs/svelte-splide": "^0.2.7",
 		"daisyui": "^2.24.0",
 		"dotenv": "^16.0.1",
 		"mongodb": "^4.9.0"

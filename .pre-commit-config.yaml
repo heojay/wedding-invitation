@@ -18,16 +18,11 @@ repos:
           - prettier
           - prettier-plugin-svelte
           - svelte
-  - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v8.23.0
+  - repo: local
     hooks:
       - id: eslint
+        name: eslint
+        language: system
         types: [file]
         files: \.(svelte|js|ts)$
-        additional_dependencies:
-          - eslint
-          - svelte
-          - typescript
-          - eslint-plugin-svelte3
-          - '@typescript-eslint/eslint-plugin'
-          - '@typescript-eslint/parser'
+        entry: npm run lint

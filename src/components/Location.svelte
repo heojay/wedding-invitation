@@ -21,10 +21,12 @@
 	<div class="container px-5 py-12 mx-auto">
 		<div class="text-center">
 			<h1 class="mb-10 text-5xl font-bold">오시는 길</h1>
-			<span
-				id="daumRoughmapContainer1661051801591"
-				class="root_daum_roughmap root_daum_roughmap_landing w-full"
-			/>
+			<div class="m-auto max-w-3xl">
+				<span
+					id="daumRoughmapContainer1661051801591"
+					class="root_daum_roughmap root_daum_roughmap_landing w-full"
+				/>
+			</div>
 			<div class="bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
 				<div>
 					<h2 class="text-gray-900 text-lg mb-1 font-medium title-font">주소</h2>

@@ -5,7 +5,13 @@
 	import Location from '$components/Location.svelte';
 </script>
 
+<svelte:head>
+	<title>김신랑과 박신부의 결혼식에 초대합니다</title>
+</svelte:head>
+
 <Intro />
 <Message />
-<Album />
+<div class="divider" />
 <Location />
+<div class="divider" />
+<Album />

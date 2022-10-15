@@ -38,33 +38,27 @@
 	});
 </script>
 
-<section class="bg-base-300">
-	<div class="container px-5 py-12 mx-auto">
-		<div class="text-center">
-			<h1 class="mb-10 text-5xl font-bold">사진첩</h1>
-			<div class="flex-wrap">
-				<div class="m-auto max-w-3xl">
-					<Splide
-						options={mainOptions}
-						bind:this={main}
-						aria-labelledby="thumbnails-example-heading"
-					>
-						{#each slides as slide}
-							<SplideSlide>
-								<img src={slide.src} alt={slide.alt} />
-							</SplideSlide>
-						{/each}
-					</Splide>
-				</div>
-				<div class="m-auto max-w-3xl">
-					<Splide options={thumbsOptions} bind:this={thumbs}>
-						{#each slides as slide}
-							<SplideSlide>
-								<img src={slide.src} alt={slide.alt} />
-							</SplideSlide>
-						{/each}
-					</Splide>
-				</div>
+<section>
+	<div class="container px-5 py-12 mx-auto text-center">
+		<h1 class="mb-10 text-5xl font-bold">사진첩</h1>
+		<div class="flex-wrap">
+			<div class="m-auto max-w-3xl">
+				<Splide options={mainOptions} bind:this={main} aria-labelledby="thumbnails-example-heading">
+					{#each slides as slide}
+						<SplideSlide>
+							<img src={slide.src} alt={slide.alt} />
+						</SplideSlide>
+					{/each}
+				</Splide>
+			</div>
+			<div class="m-auto max-w-3xl">
+				<Splide options={thumbsOptions} bind:this={thumbs}>
+					{#each slides as slide}
+						<SplideSlide>
+							<img src={slide.src} alt={slide.alt} />
+						</SplideSlide>
+					{/each}
+				</Splide>
 			</div>
 		</div>
 	</div>

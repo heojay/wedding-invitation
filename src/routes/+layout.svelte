@@ -2,4 +2,6 @@
 	import '../app.css';
 </script>
 
-<slot />
+<div class="font-Eulyoo1945">
+	<slot />
+</div>

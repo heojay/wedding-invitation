@@ -3,6 +3,7 @@
 	import Intro from '$components/Intro.svelte';
 	import Message from '$components/Message.svelte';
 	import Location from '$components/Location.svelte';
+	import Footer from '$components/Footer.svelte';
 </script>
 
 <svelte:head>
@@ -18,3 +19,6 @@
 <div class="divider" />
 <Album />
 <div class="divider" />
+<div class="mb-7">
+	<Footer />
+</div>

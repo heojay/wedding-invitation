@@ -10,7 +10,9 @@
 
 - [x] Album
 - [x] Message
-- [x] Location
+- [ ] Account Number
+- [ ] Location
+  - [ ] Replace Daum Map to Image
 - [ ] Guestbook
 
 ## Developing

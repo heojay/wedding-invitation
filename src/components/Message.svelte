@@ -1,4 +1,4 @@
-<div class="hero">
+<section>
 	<div class="container px-5 py-5">
 		<div class="w-full mx-auto">
 			<h1 class="mb-8 text-4xl font-bold">초대장</h1>
@@ -13,4 +13,4 @@
 			</p>
 		</div>
 	</div>
-</div>
+</section>

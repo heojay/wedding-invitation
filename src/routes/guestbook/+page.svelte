@@ -32,7 +32,20 @@
 	}
 </script>
 
-<section class="bg-base-100">
+<section class="bg-base-100 my-5">
+	<div class="px-5 py-5">
+		<button class="btn gap-2" onclick="window.location.href='/'">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class="h-6 w-6"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="3"
+				stroke="currentColor"><path d="M15 18l-6-6 6-6" /></svg
+			>
+			청첩장 보러가기
+		</button>
+	</div>
 	<div class="container px-5 py-5 mx-auto">
 		<h1 class="mb-10 text-5xl font-bold">방명록</h1>
 		<div class="form-control">

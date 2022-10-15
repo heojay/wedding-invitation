@@ -10,8 +10,11 @@
 </svelte:head>
 
 <Intro />
-<Message />
+<div class="mt-7">
+	<Message />
+</div>
 <div class="divider" />
 <Location />
 <div class="divider" />
 <Album />
+<div class="divider" />

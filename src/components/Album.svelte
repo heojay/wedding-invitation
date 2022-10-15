@@ -39,8 +39,8 @@
 </script>
 
 <section>
-	<div class="container px-5 py-12 mx-auto text-center">
-		<h1 class="mb-10 text-5xl font-bold">사진첩</h1>
+	<div class="container px-5 py-5 mx-auto">
+		<h1 class="mb-10 text-4xl font-bold">사진첩</h1>
 		<div class="flex-wrap">
 			<div class="m-auto max-w-3xl">
 				<Splide options={mainOptions} bind:this={main} aria-labelledby="thumbnails-example-heading">

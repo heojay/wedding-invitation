@@ -32,6 +32,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>방명록</title>
+</svelte:head>
+
 <section class="bg-base-100 my-5">
 	<div class="px-5 py-5">
 		<button class="btn gap-2" onclick="window.location.href='/'">

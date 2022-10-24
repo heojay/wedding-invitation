@@ -1,9 +1,14 @@
 <script lang="ts">
-	/** @type {import('./$types').PageData} */
-	export let data;
+	import { onMount } from 'svelte';
 
+	let guestbooks = [];
 	let name = '';
 	let content = '';
+
+	onMount(async () => {
+		const res = await fetch('/api/guestbook');
+		guestbooks = (await res.json()).guestbooks.reverse();
+	});
 
 	async function doPost() {
 		const res = await fetch('/api/guestbook', {
@@ -23,7 +28,7 @@
 			alert('메시지 전송에 실패했습니다.');
 			return;
 		}
-		data.guestbooks = [...data.guestbooks, { name, content }];
+		guestbooks = [{ name, content }, ...guestbooks];
 
 		alert('등록됐습니다.');
 		name = '';
@@ -66,14 +71,14 @@
 			</button>
 		</div>
 	</div>
-	{#if data.guestbooks}
+	{#if guestbooks}
 		<div class="mb-10">
-			{#each data.guestbooks as guestbook}
+			{#each guestbooks as guestbook}
 				<div class="container px-5 py-2 mx-auto">
 					<div class="flex flex-col w-full p-8 mx-auto bg-white rounded-lg shadow-md">
 						<div class="mt-2">
 							<p class="text-2xl font-bold text-gray-700">{guestbook.name}</p>
-							<p class="mt-2 text-gray-600">{guestbook.content}</p>
+							<p class="mt-2 text-gray-600s">{guestbook.content}</p>
 						</div>
 					</div>
 				</div>

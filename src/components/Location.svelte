@@ -26,7 +26,7 @@
 				class="root_daum_roughmap root_daum_roughmap_landing w-full"
 			/>
 		</div>
-		<div class="bg-white flex flex-col w-full mt-8">
+		<div class="flex flex-col w-full mt-8">
 			<div>
 				<h2 class="text-gray-900 text-lg mt-1 font-medium title-font">주소</h2>
 				<p class="leading-relaxed mt-1 text-gray-600">OO시 OO구 OO동 OO웨딩홀</p>

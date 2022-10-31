@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	let guestbooks = [];
+	let guestbooks;
 	let name = '';
 	let content = '';
 

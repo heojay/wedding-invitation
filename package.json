@@ -32,7 +32,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@splidejs/svelte-splide": "^0.2.7",
 		"daisyui": "^2.24.0",
 		"dotenv": "^16.0.1",
 		"mongodb": "^4.9.0"

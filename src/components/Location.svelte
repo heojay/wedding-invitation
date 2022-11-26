@@ -1,43 +1,40 @@
-<script lang="ts">
-	import { onMount } from 'svelte';
-
-	onMount(() => {
-		// eslint-disable-next-line no-undef
-		new daum.roughmap.Lander({
-			timestamp: '1661051801591',
-			key: '2bfnx',
-			mapHeight: '400'
-		}).render();
-	});
-</script>
-
-<svelte:head>
-	<script
-		charset="UTF-8"
-		class="daum_roughmap_loader_script"
-		src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-</svelte:head>
-<section class="text-gray-600">
-	<div class="container px-5 py-5 mx-auto">
-		<h1 class="mb-10 text-4xl font-bold">오시는 길</h1>
-		<div class="m-auto max-w-3xl">
-			<span
-				id="daumRoughmapContainer1661051801591"
-				class="root_daum_roughmap root_daum_roughmap_landing w-full"
-			/>
+<section>
+	<div class="py-3 mx-auto">
+		<h1 class="mb-8 text-2xl md:text-3xl font-bold text-center text-primary">오시는 길</h1>
+		<a href="https://naver.me/xVl3FKlA" target="_blank"
+			><img src="/images/map.png" class="w-full" /></a
+		>
+		<div class="text-center py-2 bg-primary text-secondary text-sm">
+			지도를 클릭하시면 더 자세히 보실 수 있습니다.
 		</div>
-		<div class="flex flex-col w-full mt-8">
+		<div class="flex flex-col w-full px-5 mt-4">
 			<div>
-				<h2 class="text-gray-900 text-lg mt-1 font-medium title-font">주소</h2>
-				<p class="leading-relaxed mt-1 text-gray-600">OO시 OO구 OO동 OO웨딩홀</p>
+				<p class="leading-relaxed mt-1" />
 			</div>
-			<div>
-				<h2 class="text-gray-900 text-lg mt-5 font-medium title-font">지하철</h2>
-				<p class="leading-relaxed mt-1 text-gray-600">[분당선] 서현역 4번 출구 도보 1분</p>
+			<div class="card p-4 mb-2 bg-base-100 shadow-xl">
+				<h2 class="text-lg font-bold title-font">지하철</h2>
+				<p class="leading-relaxed mt-1 text-sm">
+					3호선 양재역, 신분당선 양재역 - 9번 출구 바로 연결
+				</p>
 			</div>
-			<div>
-				<h2 class="text-gray-900 text-lg mt-5 font-medium title-font">도보</h2>
-				<p class="leading-relaxed mt-1 text-gray-600">발 닿는 대로 맘 가는 대로</p>
+			<div class="card p-4 my-2 bg-base-100 shadow-xl">
+				<h2 class="text-lg font-bold title-font">자가용</h2>
+				<p class="leading-relaxed mt-1 text-sm">
+					엘블레스 옆 양재역 주차장 이용 (2시간 무료)<br />서울시 서초구 강남대로 221번지 (양재동
+					23번지)
+				</p>
+			</div>
+			<div class="card p-4 mt-2 bg-base-100 shadow-xl">
+				<h2 class="text-lg font-bold title-font">버스</h2>
+				<p class="leading-relaxed mt-1 text-sm">
+					양재역, 서초구민회관에서 하차<br /><br />
+					지선 : 3412, 4432, 4435<br />
+					간선 : 140, 440, 405, 421, 440, 441, 470, 541, 542<br />
+					광역 : 9100, 9200, 9201, 9300, 9404, 9408, 9500, 9501, 9802, M5422, M4403<br />
+					일반 : 11-3, 917<br />
+					직행 : 1005, 1151, 1550, 1550-1, 1551, 1551B, 1560, 1570, 3000, 3002, 3003, 3007, 3030, 3100,
+					3101, 3900, 5001, 5001-1, 5002A, 5003A, 5003B, 5006, 5100, 5300, 5300-1, 6501, 9004, 9700
+				</p>
 			</div>
 		</div>
 	</div>

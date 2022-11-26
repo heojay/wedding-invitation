@@ -27,5 +27,5 @@ export async function getDb() {
 }
 
 export async function getGuestbookCollection() {
-	return (await getDb()).collection('guestbook');
+	return (await getDb()).collection('guestbook-dummy');
 }

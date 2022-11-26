@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	--swiper-navigation-color: #5d5656 !important;
+	--swiper-theme-color: #5d5656 !important;
+}
+
+.swiper-wrapper {
+	align-items: center; /* add this will all relevant prefixes */
+}

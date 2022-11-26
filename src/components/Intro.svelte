@@ -1,15 +1,26 @@
 <script lang="ts">
 	const imgUrl = '/images/intro.png';
+
+	function getDayBefore20230128() {
+		const today = new Date();
+		const dayBefore20230128 = new Date(2023, 0, 28);
+		const diff = dayBefore20230128.getTime() - today.getTime();
+		const diffDays = Math.ceil(diff / (1000 * 3600 * 24));
+		if (diffDays > 0) {
+			return `D-${diffDays}`;
+		} else {
+			return `D+${diffDays}`;
+		}
+	}
 </script>
 
-<section class="hero min-h-screen" style="background-image: url({imgUrl})">
-	<div class="hero-overlay bg-opacity-20" />
-	<div class="hero-content text-center text-white textarea-bordered">
-		<div class="max-w-md font-bold">
-			<h2 class="mb-3 text-2xl">김신부❤️박신랑</h2>
-			<h1 class="mb-5 text-4xl">결혼합니다</h1>
-			<h3 class="text-xl">2022.12.32 오후 1시</h3>
-			<h3 class="text-xl">아주 멋진 어딘가</h3>
-		</div>
-	</div>
-</section>
+<div class="text-center justify-center modal-middle flex py-9 text-xl">
+	<span class="px-3">김신랑</span>
+	<span class="px-3 text-4xl text-primary">{getDayBefore20230128()}</span>
+	<span class="px-3">김신부</span>
+</div>
+<img src={imgUrl} alt="intro" class="w-full pb-5" />
+<div class="text-center py-5 text-lg">
+	<p>2023년 01월 28일 토요일 11시</p>
+	<p>양재 엘블레스 다이아몬드홀</p>
+</div>

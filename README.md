@@ -8,12 +8,19 @@
 
 ## Roadmap
 
+### Features
+
 - [x] Album
 - [x] Message
-- [ ] Account Number
-- [ ] Location
-  - [ ] Replace Daum Map to Image
-- [ ] Guestbook
+- [x] Account Number
+- [x] Location
+  - [x] Replace Daum Map to Image
+- [x] Guestbook
+
+### Refactoring
+
+- [ ] Change to Template
+- [ ] Follow up latest SvelteKit
 
 ## Developing
 

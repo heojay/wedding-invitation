@@ -1,5 +1,20 @@
 # Wedding Invitation
 
+- https://heojay.dev/dev/wedding-invitation/
+
+## How to Use
+
+- Add images to `static/images` folder
+- Add values
+  - starts with `<FILL_`
+- Edit Messages (Most of them are in `src/components`)
+  - groom, bride name
+  - messages
+  - maps
+  - etc..
+- Set env (check env_template)
+- Deploy using Vercel
+
 ## Objectives
 
 - Learn

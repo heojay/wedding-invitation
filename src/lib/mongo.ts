@@ -4,28 +4,36 @@ import { MongoClient } from 'mongodb';
 dotenv.config();
 const URI = process.env['MONGODB_URI'];
 
-export async function getMongoClient(): Promise<MongoClient> {
-	let client: MongoClient;
+let mongoClient = null;
+let database = null;
 
-	if (!URI) {
-		throw new Error('Please add your Mongo URI to .env.local');
-	}
-	if (process.env['NODE_ENV'] === 'development') {
-		if (!global._mongoClientPromise) {
-			client = new MongoClient(URI);
-			global._mongoClientPromise = client.connect();
+export async function connectToDatabase() {
+	try {
+		if (mongoClient && database) {
+			return { mongoClient, database };
 		}
-		return global._mongoClientPromise;
-	} else {
-		client = new MongoClient(URI);
-		return client.connect();
+		if (!URI) {
+			console.error('Please add your Mongo URI to .env.local');
+			return;
+		}
+		if (process.env.NODE_ENV === 'development') {
+			if (!global._mongoClient) {
+				mongoClient = await new MongoClient(URI).connect();
+				global._mongoClient = mongoClient;
+			} else {
+				mongoClient = global._mongoClient;
+			}
+		} else {
+			mongoClient = await new MongoClient(URI).connect();
+		}
+		database = await mongoClient.db();
+		return { mongoClient, database };
+	} catch (e) {
+		console.error(e);
 	}
-}
-
-export async function getDb() {
-	return (await getMongoClient()).db();
 }
 
 export async function getGuestbookCollection() {
-	return (await getDb()).collection('guestbook-dummy');
+	const { database } = await connectToDatabase();
+	return database.collection('guestbook-dummy');
 }

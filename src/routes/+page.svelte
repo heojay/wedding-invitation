@@ -8,49 +8,53 @@
 	import Account from '$components/Account.svelte';
 	import Saos from 'saos';
 	import { onMount } from 'svelte';
-	import { page } from '$app/stores';
+	import { fade } from 'svelte/transition';
+	import Memory from '$components/Memory.svelte';
 
 	let guestbooks;
-	let isgroom = false;
+	$: isMemory = false;
 
 	onMount(async () => {
-		if ($page.url.searchParams.get('groom') === 'true') {
-			isgroom = true;
-		}
 		const res = await fetch('/api/guestbook');
 		guestbooks = (await res.json()).guestbooks.reverse().filter((guestbook) => !guestbook.hide);
 	});
 </script>
 
 <svelte:head>
-	<title>김신랑과 김신부의 결혼식에 초대합니다</title>
+	<title>허신랑과 정신부의 결혼식에 초대합니다</title>
 </svelte:head>
 
-<Intro />
-<div class="divider" />
-<Saos once={true} animation={'fade-in 2.5s'} top={300}>
-	<Message />
-	<div class="divider" />
-</Saos>
-<Saos once={true} animation={'fade-in 2.5s'} top={300}>
-	<Location />
-	<div class="divider" />
-</Saos>
-<Saos once={true} animation={'fade-in 2.5s'} top={300}>
-	<Album />
-	<div class="divider" />
-</Saos>
-<Saos once={true} animation={'fade-in 2.5s'} top={300}>
-	{#if !isgroom}
-		<Account />
+{#if !isMemory}
+	<div in:fade={{ duration: 2500 }} out:fade>
+		<Intro bind:isMemory />
 		<div class="divider" />
-	{/if}
-	<Guestbook {guestbooks} />
-	<div class="divider" />
-	<div class="mb-7">
-		<Footer {isgroom} />
+		<Saos once={true} animation={'fade-in 1.5s'} top={250}>
+			<Message />
+			<div class="divider" />
+		</Saos>
+		<Saos once={true} animation={'fade-in 1.5s'} top={250}>
+			<Location />
+			<div class="divider" />
+		</Saos>
+		<Saos once={true} animation={'fade-in 1.5s'} top={250}>
+			<Album />
+			<div class="divider" />
+		</Saos>
+		<Saos once={true} animation={'fade-in 1.5s'} top={250}>
+			<Account />
+			<div class="divider" />
+			<Guestbook {guestbooks} />
+			<div class="divider" />
+			<div class="mb-7">
+				<Footer />
+			</div>
+		</Saos>
 	</div>
-</Saos>
+{:else}
+	<div in:fade={{ duration: 2500 }} out:fade>
+		<Memory bind:isMemory />
+	</div>
+{/if}
 
 <style>
 	@-webkit-keyframes -global-fade-in {

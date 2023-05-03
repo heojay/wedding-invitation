@@ -2,8 +2,9 @@
 	import { env } from '$env/dynamic/public';
 	import copy from 'copy-to-clipboard';
 
-	export let isgroom;
-	const previewImageUrl = 'https://wedding-invitation-heojay.vercel.app/images/intro.png';
+	// Use Vercel image url after deploy
+	// ex. https://wedding-invitation-heojay.vercel.app/images/main.jpg
+	const previewImageUrl = '<FILL_PREIVEW_IMAGE_URL>';
 
 	const initialize = () => {
 		// eslint-disable-next-line no-undef
@@ -13,9 +14,7 @@
 			container: '#kakaotalk-sharing-btn',
 			objectType: 'feed',
 			content: {
-				title: isgroom
-					? '김신랑과 김신부의 결혼식에 초대합니다'
-					: '김신부과 김신랑의 결혼식에 초대합니다',
+				title: '김신랑과 김신부의 결혼식에 초대합니다',
 				description: '2023년 01월 28일 토요일 11시 양재 엘블레스 다이아몬드홀',
 				imageUrl: previewImageUrl,
 				link: {

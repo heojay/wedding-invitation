@@ -13,6 +13,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
+		"@types/gtag.js": "^0.0.12",
 		"@typescript-eslint/eslint-plugin": "^5.36.0",
 		"@typescript-eslint/parser": "^5.36.0",
 		"autoprefixer": "^10.4.8",
@@ -36,7 +37,8 @@
 		"copy-to-clipboard": "^3.3.3",
 		"daisyui": "^2.42.1",
 		"dotenv": "^16.0.1",
-		"mongodb": "^4.9.0",
+		"mongodb": "^4.12.1",
+		"nodemailer": "^6.8.0",
 		"svelte-awesome": "^3.0.0",
 		"swiper": "^8.4.5"
 	}
